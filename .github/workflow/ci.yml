@@ -1,3 +1,16 @@
+name: ping
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  say-hi:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hi from $(date)"
+
 name: CI Pipeline
 
 on:
